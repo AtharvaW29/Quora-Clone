@@ -1,0 +1,35 @@
+[debug] [2022-10-19T16:55:42.976Z] ----------------------------------------------------------------------
+[debug] [2022-10-19T16:55:42.977Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\91973\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-10-19T16:55:42.977Z] CLI Version:   11.15.0
+[debug] [2022-10-19T16:55:42.977Z] Platform:      win32
+[debug] [2022-10-19T16:55:42.977Z] Node Version:  v16.13.1
+[debug] [2022-10-19T16:55:42.978Z] Time:          Wed Oct 19 2022 22:25:42 GMT+0530 (India Standard Time)
+[debug] [2022-10-19T16:55:42.978Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-19T16:55:43.028Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-19T16:55:43.028Z] > authorizing via signed-in user (atharva.wagh@somaiya.edu)
+[debug] [2022-10-19T16:55:43.028Z] [iam] checking project quora-clone-akky for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-10-19T16:55:43.029Z] > refreshing access token with scopes: []
+[debug] [2022-10-19T16:55:43.031Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-19T16:55:43.031Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-19T16:55:43.312Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-10-19T16:55:43.312Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-19T16:55:43.320Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/quora-clone-akky:testIamPermissions [none]
+[debug] [2022-10-19T16:55:43.320Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/quora-clone-akky:testIamPermissions x-goog-quota-user=projects/quora-clone-akky
+[debug] [2022-10-19T16:55:43.320Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/quora-clone-akky:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-19T16:55:44.967Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/quora-clone-akky:testIamPermissions 200
+[debug] [2022-10-19T16:55:44.968Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/quora-clone-akky:testIamPermissions {}
+[debug] [2022-10-19T16:55:44.968Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project quora-clone-akky:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2022-10-19T16:55:44.969Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/quora-clone-akky [none]
+[debug] [2022-10-19T16:55:45.517Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/quora-clone-akky 403
+[debug] [2022-10-19T16:55:45.517Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/quora-clone-akky {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2022-10-19T16:55:45.519Z] HTTP Error: 403, The caller does not have permission
+[debug] [2022-10-19T16:55:45.739Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\91973\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\91973\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project quora-clone-akky. Please make sure the project exists and your account has permission to access it.
